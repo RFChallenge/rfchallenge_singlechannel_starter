@@ -5,7 +5,7 @@ The helper functions in this starter code use SigMF and CommPy. To install these
 pip install git+https://github.com/gnuradio/SigMF.git
 pip install scikit-commpy
 ```
-Other dependencies include: NumPy, Matplotlib, Tensorflow (to run the [`bitregression`](https://github.mit.edu/sia/rfchallenge_starter/tree/main/example/demod_bitregression) example), tqdm (for progress bar)  
+Other dependencies include: NumPy, Matplotlib, Tensorflow (to run the [`bitregression`](https://github.com/RFChallenge/rfchallenge_singlechannel_starter/tree/main/example/demod_bitregression) example), tqdm (for progress bar)  
 
 Please ensure that the `dataset` is saved in the folder "dataset", and retains the folder hierarchy as provided -- this allows the helper functions to correctly find and load the corresponding files.
 
@@ -17,11 +17,11 @@ rm rfc_dataset.zip
 ```
 
 
-The python notebook [`notebook/Demo.ipynb`](https://github.mit.edu/sia/rfchallenge_starter/blob/main/notebook/Demo.ipynb) demonstrates how these helper functions may be used to load the respective sigmf files from the training and validation datasets.
+The python notebook [`notebook/Demo.ipynb`](https://github.com/RFChallenge/rfchallenge_singlechannel_starter/blob/main/notebook/Demo.ipynb) demonstrates how these helper functions may be used to load the respective sigmf files from the training and validation datasets.
 
-The python notebook [`notebook/QuickStart.ipynb`](https://github.mit.edu/sia/rfchallenge_starter/blob/main/notebook/QuickStart.ipynb) provides a brief overview on helper functions and code snippet that will get you started.
+The python notebook [`notebook/QuickStart.ipynb`](https://github.com/RFChallenge/rfchallenge_singlechannel_starter/blob/main/notebook/QuickStart.ipynb) provides a brief overview on helper functions and code snippet that will get you started.
 
-Refer to the python notebook [`notebook/Reference_Methods.ipynb`](https://github.mit.edu/sia/rfchallenge_starter/blob/main/notebook/Reference_Methods.ipynb) for reference methods that you can compare against!
+Refer to the python notebook [`notebook/Reference_Methods.ipynb`](https://github.com/RFChallenge/rfchallenge_singlechannel_starter/blob/main/notebook/Reference_Methods.ipynb) for reference methods that you can compare against!
 
 ---
 
