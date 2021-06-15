@@ -1,0 +1,2 @@
+*_stats.pickle filter=lfs diff=lfs merge=lfs -text
+*_1024.data* filter=lfs diff=lfs merge=lfs -text
