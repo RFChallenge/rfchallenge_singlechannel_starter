@@ -23,19 +23,11 @@ The python notebook [`notebook/QuickStart.ipynb`](https://github.mit.edu/sia/rfc
 
 Refer to the python notebook [`notebook/Reference_Methods.ipynb`](https://github.mit.edu/sia/rfchallenge_starter/blob/main/notebook/Reference_Methods.ipynb) for reference methods that you can compare against!
 
+---
+
 ### Note regarding examples:
-As some of the saved files in the example methods are large, Git LFS is required to acquire some of these files. 
-
-If Git LFS has not been installed at the point of cloning this repository, please follow these steps to obtain the large files in the example folder.
-Follow https://git-lfs.github.com/ to install Git LFS. Subsequently, you can pull the respective large files by:
-```bash
-# Assuming you have cloned the repository, navigate to the rfchallenge_starter folder
-git lfs install
-git lfs pull
-```
-This step is only required if you wish to run scripts or functions provided in the `example` folder.
-
-Alternatively, you can get a zipped folder of the contents of the `example` folder using the following commands:
+As some of the saved files in the example methods are large (e.g. saved models and statistics), they are not included in this Git repository. 
+You can get get the full contents of the `example` folder using the following commands:
 ```bash
 wget -O rfc_example.zip "https://www.dropbox.com/s/mlwlhnouz4ljdly/rfc_example.zip?dl=0"
 unzip -o rfc_example.zip
@@ -43,7 +35,9 @@ rm rfc_example.zip
 ```
 NB: `unzip -o` overwrites files in the example folder. If you have modified or added files to the example folder, back up those files before running the above commands.
 
+This step is only required if you wish to run scripts or functions provided in the `example` folder.
 
+---
 ### Direct Download Links:
 * [Dataset (Training set)](https://www.dropbox.com/s/clh4xq7u3my3nx6/rfc_dataset.zip?dl=0)
 * [Example folder from starter code](https://www.dropbox.com/s/mlwlhnouz4ljdly/rfc_example.zip?dl=0)
