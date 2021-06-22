@@ -1,9 +1,10 @@
-import os
+import os, sys
 import numpy as np
 import pickle
 from tqdm import tqdm
 
 from bitregression_model import get_model
+import tensorflow as tf
 
 # to run this file from within example/demod_bitregression folder
 os.chdir(os.getcwd())
