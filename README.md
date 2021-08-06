@@ -1,5 +1,7 @@
 # Single-Channel RF Challenge Starter Code
 
+[Click here for details on the challenge setup](https://rfchallenge.mit.edu/wp-content/uploads/2021/08/Challenge1_pdf_detailed_description.pdf)
+
 The helper functions in this starter code use SigMF and CommPy. To install these dependencies:
 ```bash
 pip install git+https://github.com/gnuradio/SigMF.git
