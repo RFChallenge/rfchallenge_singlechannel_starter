@@ -11,12 +11,13 @@ Other dependencies include: NumPy, Matplotlib, Tensorflow (to run the [`bitregre
 
 Please ensure that the `dataset` is saved in the folder "dataset", and retains the folder hierarchy as provided -- this allows the helper functions to correctly find and load the corresponding files.
 
-To obtain the dataset, you may use the following commands:
+To obtain the dataset, you may use the following commands (from within the RFChallenge starter code folder):
 ```bash
 wget -O rfc_dataset.zip "https://www.dropbox.com/s/clh4xq7u3my3nx6/rfc_dataset.zip?dl=0"
-unzip -o rfc_dataset.zip
+jar -xvf rfc_dataset.zip
 rm rfc_dataset.zip
 ```
+(Note that `jar` is used here, instead of `unzip`, since the zip file is larger than 4 GB. You may also use `7z` to extract the contents.)
 
 
 The python notebook [`notebook/Demo.ipynb`](https://github.com/RFChallenge/rfchallenge_singlechannel_starter/blob/main/notebook/Demo.ipynb) demonstrates how these helper functions may be used to load the respective sigmf files from the training and validation datasets.
