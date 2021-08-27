@@ -70,8 +70,8 @@ interference_type = 'EMISignal1'
 interference_sig_dataset = load_train_frames(interference_type, 530)
 block_dataset = generate_samples(interference_sig_dataset)
 mu_emi1 = np.mean(block_dataset, axis=0)
-cov1_emi1 = 1/block_dataset.shape[0]*np.matmul(np.transpose(np.conj(block_dataset-mu_emi1)), block_dataset-mu_emi1)
-cov2_emi1 = 1/block_dataset.shape[0]*np.matmul(np.transpose((block_dataset-mu_emi1)), block_dataset-mu_emi1)
+cov1_emi1 = 1/block_dataset.shape[0]*np.matmul(np.transpose(block_dataset-mu_emi1), np.conj(block_dataset-mu_emi1))
+cov2_emi1 = 1/block_dataset.shape[0]*np.matmul(np.transpose(block_dataset-mu_emi1), block_dataset-mu_emi1)
 
 pickle.dump((mu_emi1,cov1_emi1,cov2_emi1),open(os.path.join(stats_folder,f'{interference_type}_stats.pickle'),'wb'))
 
@@ -80,8 +80,8 @@ interference_type = 'CommSignal3'
 interference_sig_dataset = load_train_frames(interference_type, 139)
 block_dataset = generate_samples(interference_sig_dataset)
 mu_comm3 = np.mean(block_dataset, axis=0)
-cov1_comm3 = 1/block_dataset.shape[0]*np.matmul(np.transpose(np.conj(block_dataset-mu_comm3)), block_dataset-mu_comm3)
-cov2_comm3 = 1/block_dataset.shape[0]*np.matmul(np.transpose((block_dataset-mu_comm3)), block_dataset-mu_comm3)
+cov1_comm3 = 1/block_dataset.shape[0]*np.matmul(np.transpose(block_dataset-mu_comm3), np.conj(block_dataset-mu_comm3))
+cov2_comm3 = 1/block_dataset.shape[0]*np.matmul(np.transpose(block_dataset-mu_comm3), block_dataset-mu_comm3)
 
 pickle.dump((mu_comm3,cov1_comm3,cov2_comm3),open(os.path.join(stats_folder,f'{interference_type}_stats.pickle'),'wb'))
 
@@ -91,8 +91,8 @@ sig_type = 'CommSignal2'
 sig_sig_dataset = load_train_frames(sig_type, 100)
 block_dataset = generate_samples(sig_sig_dataset)
 mu_comm2 = np.mean(block_dataset, axis=0)
-cov1_comm2 = 1/block_dataset.shape[0]*np.matmul(np.transpose(np.conj(block_dataset-mu_comm2)), block_dataset-mu_comm2)
-cov2_comm2 = 1/block_dataset.shape[0]*np.matmul(np.transpose((block_dataset-mu_comm2)), block_dataset-mu_comm2)
+cov1_comm2 = 1/block_dataset.shape[0]*np.matmul(np.transpose(block_dataset-mu_comm2), np.conj(block_dataset-mu_comm2))
+cov2_comm2 = 1/block_dataset.shape[0]*np.matmul(np.transpose(block_dataset-mu_comm2), block_dataset-mu_comm2)
 
 pickle.dump((mu_comm2,cov1_comm2,cov2_comm2),open(os.path.join(stats_folder,f'{sig_type}_stats.pickle'),'wb'))
 
@@ -102,8 +102,8 @@ sig_type = 'CommSignal2'
 sig_sig_dataset = load_train_frames(sig_type, 100)
 block_dataset, template_start = generate_aligned_samples(sig_sig_dataset)
 mu_comm2 = np.mean(block_dataset, axis=0)
-cov1_comm2 = 1/block_dataset.shape[0]*np.matmul(np.transpose(np.conj(block_dataset-mu_comm2)), block_dataset-mu_comm2)
-cov2_comm2 = 1/block_dataset.shape[0]*np.matmul(np.transpose((block_dataset-mu_comm2)), block_dataset-mu_comm2)
+cov1_comm2 = 1/block_dataset.shape[0]*np.matmul(np.transpose(block_dataset-mu_comm2), np.conj(block_dataset-mu_comm2))
+cov2_comm2 = 1/block_dataset.shape[0]*np.matmul(np.transpose(block_dataset-mu_comm2), block_dataset-mu_comm2)
 
 pickle.dump((mu_comm2,cov1_comm2,cov2_comm2,template_start),open(os.path.join(stats_folder,f'{sig_type}_aligned_stats.pickle'),'wb'))
 
