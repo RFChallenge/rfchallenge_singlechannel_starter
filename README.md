@@ -34,7 +34,7 @@ Refer to the python notebook [`notebook/Reference_Methods.ipynb`](https://github
 As some of the saved files in the example methods are large (e.g. saved models and statistics), they are not included in this Git repository. 
 You can get get the full contents of the `example` folder using the following commands:
 ```bash
-wget -O rfc_example.zip "https://www.dropbox.com/s/a9tcqcsqf710jpt/rfc_example.zip?dl=0"
+wget -O rfc_example.zip "https://www.dropbox.com/s/j210lhqxsbx85o4/rfc_example.zip?dl=0"
 unzip -o rfc_example.zip
 rm rfc_example.zip
 ```
@@ -44,5 +44,5 @@ This step is only required if you wish to run scripts or functions provided in t
 
 ---
 ### Direct Download Links:
-* [Dataset (Training set)](https://www.dropbox.com/s/clh4xq7u3my3nx6/rfc_dataset.zip?dl=0)
-* [Example folder from starter code](https://www.dropbox.com/s/a9tcqcsqf710jpt/rfc_example.zip?dl=0)
+* [Dataset (Training set)](https://www.dropbox.com/s/clh4xq7u3my3nx6/rfc_dataset.zip?dl=0) (Latest Version: Jun 15, 2021)
+* [Example folder from starter code](https://www.dropbox.com/s/j210lhqxsbx85o4/rfc_example.zip?dl=0) (Latest Version: Sep 1, 2021)
