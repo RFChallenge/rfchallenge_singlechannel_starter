@@ -46,7 +46,7 @@ def main():
         mse = get_mse(sig1_mmse-sig1)
         all_mse.append(mse)
         
-        print(f"#{idx} -- SINR {sinr:.3f}dB: MSE:{mse} SDR:{sdr}")
+        print(f"#{idx} -- SINR {sinr:.3f}dB: MSE:{mse} SDR:{sdr}, Mixture MSE:{get_pow(sig_mixture-sig1_mmse-sig2_mmse)}")
         
         if len(all_sinr)%100 == 0:
             pickle.dump((all_mse, all_default_mse, all_sdr, all_sinr), open(os.path.join(output_folder, f'lmmse_{interference_sig_type}_{val_or_test}_sep_{align_soi_str}.pickle'),'wb'))

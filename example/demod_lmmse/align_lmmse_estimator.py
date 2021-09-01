@@ -42,11 +42,10 @@ def align_lmmse_separate(sig_mixture, soi_type='QPSK', interference_sig_type = '
     scaled_Cbb = Cbb * 1/est_sinr
     Csy = np.vstack((Css, scaled_Cbb))
     Cyy = Css + scaled_Cbb
-    U,S,Vh = np.linalg.svd(Cyy,hermitian=True)
-#     Cyy_inv = np.matmul(U, np.matmul(np.diag(1.0/(S + 1e-4)), U.conj().T))
 #     Cyy_inv = np.linalg.pinv(Cyy,hermitian=True)
-    sthr_idx = np.where(S>1e-4)[0][-1]
-    Cyy_inv = np.matmul(U[:,:sthr_idx], np.matmul(np.diag(1.0/(S[:sthr_idx])), U[:,:sthr_idx].conj().T))
+    U,S,Vh = np.linalg.svd(Cyy,hermitian=True)
+    n_sv = min(np.where(S>1e-3)[0][-1] + 1, len(S))
+    Cyy_inv = np.matmul(U[:,:n_sv], np.matmul(np.diag(1.0/(S[:n_sv])), U[:,:n_sv].conj().T))
     W = np.matmul(Csy,Cyy_inv)
     
     window_len = W.shape[1]

@@ -31,7 +31,7 @@ def generate_samples(sig_dataset, block_len=block_len, window_len=window_len):
         idx = np.random.randint(sig_dataset.shape[0])
         start_idx = np.random.randint(sig_dataset.shape[1]-window_len)
         train_data = sig_dataset[idx, start_idx:start_idx+window_len]
-        train_data = train_data/np.mean(np.abs(train_data)**2)
+        train_data = train_data/np.sqrt(np.mean(np.abs(train_data)**2))
         train_data = train_data[:(window_len//block_len)*block_len]
         block_data = train_data.reshape(-1,block_len)
         block_dataset.append(block_data)
@@ -48,7 +48,7 @@ def generate_aligned_samples(sig_dataset, block_len=block_len, window_len=window
         idx = np.random.randint(sig_dataset.shape[0])
         start_idx = np.random.randint(sig_dataset.shape[1]-window_len)
         train_data = sig_dataset[idx, start_idx:start_idx+window_len]
-        train_data = train_data/np.mean(np.abs(train_data)**2)
+        train_data = train_data/np.sqrt(np.mean(np.abs(train_data)**2))
 
         # alignment
         if ii == 0:

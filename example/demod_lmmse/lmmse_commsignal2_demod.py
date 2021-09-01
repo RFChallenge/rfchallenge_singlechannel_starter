@@ -43,7 +43,7 @@ def main():
         sdr = get_sinr(sig1, sig1-sig1_mmse)
         all_sdr.append(sdr)
         
-        print(f"#{idx} -- SINR {sinr:.3f}dB: 1:{ber} Default:{ber_ref}, SDR:{sdr}")
+        print(f"#{idx} -- SINR {sinr:.3f}dB: 1:{ber} Default:{ber_ref}, SDR:{sdr}, Mixture MSE:{get_pow(sig_mixture-sig1_mmse-sig2_mmse)}")
         
         if len(all_sinr)%100 == 0:
             pickle.dump((all_ber, all_default_ber, all_sdr, all_sinr), open(os.path.join(output_folder, f'lmmse_{interference_sig_type}_{val_or_test}_demod.pickle'),'wb'))
